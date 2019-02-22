@@ -14,20 +14,21 @@ img {
 
 @media (max-width: 1200px) {
   .container {
-    width: 760px;
+    max-width: 1060px;
+    width: 95%;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 580px;
-    width: 100%;
+    max-width: 750px;
+    width: 95%;
   }
 }
 
 @media (max-width: 567px) {
   .container {
-    max-width: 320px;
+    max-width: 550px;
     width: 100%;
   }
 }
@@ -36,6 +37,7 @@ img {
   border-radius: 10px;
   background-color: #ffd200;
   border: solid 1px #ffd200;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -114,7 +116,7 @@ img {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 18px 0px;
+    padding: 18px 20px;
   }
   .navbar__contacts {
     display: none;
