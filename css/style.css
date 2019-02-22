@@ -21,14 +21,38 @@ img {
 @media (max-width: 768px) {
   .container {
     max-width: 580px;
-    width: 95%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    max-width: 320px;
+    width: 100%;
   }
 }
 
 .button {
   border-radius: 10px;
   background-color: #ffd200;
-  border: none;
+  border: solid 1px #ffd200;
+}
+
+.button:hover {
+  background-color: #fff;
+  border: solid 1px #ffd200;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 /* Ипорт стилей шапки*/
@@ -58,7 +82,7 @@ img {
   text-align: right;
 }
 
-.navbar__adress {
+.navbar__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,9 +94,13 @@ img {
 
 .navbar__button {
   margin-left: 30px;
-  padding: 19px 30px 17px 30px;
+  padding: 15px 28px 18px 29px;
   font-size: 13px;
   font-weight: bold;
+}
+
+.navbar__adress {
+  font-size: 13px;
 }
 
 .navbar__phone {
@@ -81,7 +109,7 @@ img {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -92,9 +120,26 @@ img {
     display: none;
   }
   .navbar__button {
-    margin-left: 49px;
     font-size: 10px;
-    padding: 15px 26px 14px 26px;
+    padding: 14px 25px 13px 25px;
+    border-radius: 5px;
+  }
+  .navbar__logo {
+    width: 90px;
+  }
+}
+
+@media (max-width: 567px) {
+  .navbar {
+    padding: 18px 23px 18px 20px;
+  }
+  .navbar__contacts {
+    display: none;
+  }
+  .navbar__button {
+    margin-left: 35px;
+    font-size: 10px;
+    padding: 11px 25px 15px 25px;
     border-radius: 5px;
   }
   .navbar__logo {

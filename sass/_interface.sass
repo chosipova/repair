@@ -1,6 +1,6 @@
 body
   font-family: sans-serif
-
+  
 img
   max-width: 100%
 
@@ -8,15 +8,32 @@ img
   width: 1170px
   margin: auto
 
+
 @media (max-width: 1200px)
   .container
     width: 760px
 @media (max-width: 768px)
   .container
     max-width: 580px
-    width: 95%
+    width: 100%
+
+@media (max-width: 567px)
+  .container
+    max-width: 320px
+    width: 100%
 
 .button
   border-radius: 10px
   background-color: $main-color
-  border: none
+  border: solid 1px $main-color
+  &:hover
+    background-color: $hover-color
+    border: solid 1px $main-color
+    outline: 0
+    outline-offset: 0
+  &:active
+    outline: 0
+    outline-offset: 0
+  &:focus
+    outline: 0
+    outline-offset: 0
