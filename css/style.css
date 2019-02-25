@@ -1,4 +1,9 @@
 @charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -29,7 +34,7 @@ img {
 @media (max-width: 567px) {
   .container {
     max-width: 550px;
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -133,36 +138,47 @@ img {
 
 @media (max-width: 567px) {
   .navbar {
-    padding: 18px 23px 18px 20px;
+    padding: 21px 17px 18px 15px;
   }
   .navbar__contacts {
     display: none;
   }
   .navbar__button {
-    margin-left: 35px;
+    margin-left: 40px;
     font-size: 10px;
     padding: 11px 25px 15px 25px;
     border-radius: 5px;
   }
   .navbar__logo {
-    width: 90px;
+    max-width: 90px;
   }
 }
 
 .hero {
-  padding: 50px 0;
+  padding: 45px 0;
+  background-color: #f5f5f5;
 }
 
 .hero-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-image {
+  -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
+          box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
 }
 
 .hero-text {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
-  padding-right: 140px;
 }
 
 .hero-text__title {
@@ -178,9 +194,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   color: #333333;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 .hero-list {
@@ -216,7 +232,7 @@ img {
 }
 
 .hero-list__text {
-  max-width: 300px;
+  max-width: 250px;
   font-size: 14px;
   line-height: 24px;
   color: #333333;
@@ -232,16 +248,19 @@ img {
   .hero-list {
     margin-bottom: 44px;
   }
-  .hero-text {
-    padding-right: 10px;
-  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 18px 0;
+  }
+  .hero-block {
+    padding: 0 15px;
+  }
   .hero-text__title {
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .hero-text__subtitle {
     font-size: 16px;
@@ -252,6 +271,7 @@ img {
   }
   .hero-list__text {
     font-size: 12px;
+    line-height: 1.4;
   }
   .hero-list__image {
     margin-right: 15px;
