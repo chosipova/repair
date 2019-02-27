@@ -2,6 +2,7 @@
   box-sizing: border-box
 
 body
+  color: $text-color
   +reg
 
 img
@@ -11,30 +12,17 @@ img
   width: 1170px
   margin: auto
 
-
-@media (max-width: 1200px)
-  .container
-    max-width: 1170px
-    width: 95%
-    
-@media (max-width: 768px)
-  .container
-    max-width: 750px
-    width: 95%
-
-@media (max-width: 567px)
-  .container
-    max-width: 550px
-    width: 95%
-
 .button
   border-radius: 10px
   background-color: $main-color
   border: solid 1px $main-color
   cursor: pointer
+  +bold
   &:hover
-    background-color: $hover-color
-    border: solid 1px $main-color
+    // background-color: $hover-color
+    // border: solid 1px $main-color
+    background-color:  lighten($main-color, 10%)
+    border: solid 1px lighten($main-color, 10%)
     outline: 0
     outline-offset: 0
   &:active
@@ -43,3 +31,29 @@ img
   &:focus
     outline: 0
     outline-offset: 0
+
+.section
+  padding: 90px 0
+
+.input
+  border-radius: 10px
+  border: 1px solid #dddddd
+  background-color: #ffffff
+  font-size: 15px
+  
+@media (max-width: 1200px)
+  .container
+    max-width: 1170px
+    width: 95%
+    
+@media (max-width: 768px)
+  .container
+    max-width: 750px
+    width: 90%
+
+@media (max-width: 567px)
+  .container
+    max-width: 550px
+    width: 90%
+  .section
+    padding: 50px 0
