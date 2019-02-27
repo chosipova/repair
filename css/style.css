@@ -62,7 +62,7 @@ img {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 55px 0;
 }
 
 .input {
@@ -341,7 +341,7 @@ img {
 }
 
 .offer-block__title {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   max-width: 360px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
@@ -351,14 +351,16 @@ img {
 
 .offer-block__subtitle {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   max-width: 250px;
   font-size: 16px;
   font-weight: 400;
 }
 
 .offer__input {
-  padding: 25px 43px;
+  padding: 25px;
+  width: 240px;
+  height: 60px;
   margin-bottom: 30px;
 }
 
@@ -369,7 +371,33 @@ img {
 .offer__button {
   width: 100%;
   min-height: 70px;
+  margin-bottom: 28px;
   font-size: 16px;
+}
+
+.offer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.offer-contacts__phone {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.offer-contacts__span {
+  width: 50%;
+  margin-right: 80px;
+}
+
+.offer-contacts__span:last-child {
+  margin-right: 0;
 }
 
 @media (max-width: 1200px) {
