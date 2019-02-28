@@ -365,7 +365,6 @@ img {
   margin-bottom: 34px;
   max-width: 250px;
   font-size: 16px;
-  font-weight: 400;
 }
 
 .offer__input {
@@ -395,7 +394,6 @@ img {
 }
 
 .offer-contacts__phone {
-  display: block;
   color: #333333;
   text-decoration: none;
   font-family: 'Museo Sans Bold', sans-serif;
@@ -415,6 +413,18 @@ img {
   .offer {
     background-size: cover;
   }
+  .offer-block {
+    padding-right: 40px;
+  }
+  .offer-block__title {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .offer-block__subtitle {
+    max-width: 100%;
+    font-size: 14px;
+  }
   .offer__input {
     width: 100%;
     margin-right: 0;
@@ -423,22 +433,85 @@ img {
   .offer__button {
     font-size: 13px;
   }
+  .offer-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer-contacts__span {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 7px;
+  }
+  .offer-contacts__span:first-child {
+    margin-bottom: 6px;
+  }
+  .offer-contacts__span:last-child {
+    padding-right: 70px;
+  }
 }
 
 @media (max-width: 768px) {
   .offer {
     background: #fff;
+    padding-right: 14px;
+  }
+  .offer-block {
+    width: 100%;
+  }
+  .offer-block__title {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 15px 15px 0;
+  }
+  .offer-block__subtitle {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 25px;
   }
   .offer__input {
     width: 100%;
+    height: 65px;
     margin-bottom: 10px;
+  }
+  .offer__input:first-child {
+    margin-bottom: 8px;
   }
   .offer-block {
     width: 100%;
     padding-right: 0;
   }
   .offer__button {
-    font-size: 13px;
+    height: 65px;
+    font-size: 14px;
+    padding: 19px 50px;
+    margin-bottom: 22px;
+  }
+  .offer-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer-contacts__span {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 7px;
+  }
+  .offer-contacts__span:first-child {
+    margin-bottom: 6px;
+  }
+  .offer-contacts__span:last-child {
+    padding-right: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
