@@ -642,4 +642,42 @@ img {
   top: 0;
   right: 0;
 }
+
+.top {
+  position: fixed;
+  right: 0;
+  top: 90%;
+}
+
+.top-button {
+  display: none;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffdb33;
+  border-radius: 50%;
+  background-color: transparent;
+  color: gray;
+}
+
+.top-button_show {
+  display: block;
+}
+
+.top-button:hover {
+  background-color: #ffd200;
+  border: solid 1px #ffd200;
+  color: #000;
+}
+
+.top-button_hiden {
+  display: none;
+}
+
+.top-button__text {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 15px;
+}
 /*# sourceMappingURL=style.css.map */
