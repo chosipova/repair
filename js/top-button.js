@@ -3,7 +3,7 @@ $(document).ready(function () {
   console.log(btn);
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
+    if ($(window).scrollTop() > 200) {
       btn.addClass('top-button_show');
       console.log("Здесь");
     } else {
