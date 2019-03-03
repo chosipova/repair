@@ -80,10 +80,15 @@
 @media (max-width: 910px)
   .offer
     background: #fff
-    padding-right: 14px
-    text-align: center
+    padding-right: 0
+    margin-right: auto
+    margin-left: auto
+    &-container
+      display: flex
+      justify-content: center   
     &-block
-      width: 100%
+      width: 85%
+      padding-right: 0
       &__title
         max-width: 100%
         font-size: 18px
@@ -100,9 +105,6 @@
       margin-bottom: 10px
       &:first-child
         margin-bottom: 8px
-    &-block
-      width: 100%
-      padding-right: 0
     &__button
       height: 65px
       font-size: 14px
@@ -116,10 +118,10 @@
 @media (max-width: 567px)
   .offer
     background: #fff
-    padding-right: 14px
+    padding-right: 0
     text-align: left
     &-block
-      width: 100%
+      width: 90%
       &__title
         max-width: 100%
         font-size: 18px
@@ -136,9 +138,6 @@
       margin-bottom: 10px
       &:first-child
         margin-bottom: 8px
-    &-block
-      width: 100%
-      padding-right: 0
     &__button
       height: 65px
       font-size: 14px
