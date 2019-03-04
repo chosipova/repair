@@ -1,0 +1,27 @@
+.portfolio
+  background: $section-color url('../img/portfolio/portfolio-pattern.png') repeat-y center left
+  background-size: 50%
+  padding-top: 90px
+  padding-bottom: 100px
+  &__title
+    max-width: 600px
+    margin: auto
+    margin-bottom: 99px
+  &__arrows
+    max-width: 120px
+    margin: 60px auto
+    display: flex
+    justify-content: space-between
+
+@media (max-width: 567px)
+  .portfolio
+    padding-top: 43px
+    padding-bottom: 30px
+    &__title
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 36px
+    &__slider
+      margin: 0 20px
+    &__arrows
+      margin-top: 46px

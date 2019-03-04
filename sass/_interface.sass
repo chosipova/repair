@@ -37,7 +37,11 @@ img
 
 .section
   padding: 55px 0
-
+  &-title
+    font-size: 30px
+    text-align: center
+    +bold
+    line-height: 45px
 
 .input
   border-radius: 10px
@@ -51,6 +55,15 @@ img
     border: 1px solid #ffa500
     outline: 0
     outline-offset: 0
+
+.arrows
+  &__left, &__right
+    &:hover
+      cursor: pointer
+
+.slider
+  &__image
+    margin: auto
   
 @media (max-width: 1200px)
   .container
