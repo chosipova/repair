@@ -34,7 +34,7 @@
       margin-bottom: 55px
     &__subtitle
       margin-bottom: 65px
-      font-size: 20px
+      //font-size: 20px
     &-block 
       display: flex
       flex-wrap: wrap
@@ -51,9 +51,15 @@
 
 @media (max-width: 768px)
   .step
-    margin-bottom: 30px
+    margin-bottom: 20px
     &:after
       display: none
     &s
+      padding: 12px
       &-block
         flex-direction: column
+      &__title
+        line-height: 22px
+        margin-bottom: 23px
+      &__subtitle
+        margin-bottom: 30px

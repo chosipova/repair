@@ -78,7 +78,7 @@ img {
 
 .section-subtitle {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .input {
@@ -118,6 +118,13 @@ img {
   .container {
     max-width: 750px;
     width: 90%;
+  }
+  .section-title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .section-subtitle {
+    font-size: 14px;
   }
 }
 
@@ -320,6 +327,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .hero-list {
     margin-bottom: 44px;
@@ -380,7 +390,7 @@ img {
 
 @media (max-width: 567px) {
   .hero {
-    padding: 18px 0;
+    padding: 18px 0 52px 0;
   }
   .hero-text {
     -webkit-box-pack: start;
@@ -609,6 +619,7 @@ img {
     background: #fff;
     padding-right: 0;
     text-align: left;
+    padding: 45px 0 47px 0;
   }
   .offer-block {
     -ms-flex-preferred-size: 100%;
@@ -766,7 +777,6 @@ img {
     padding-bottom: 50px;
   }
   .portfolio__title {
-    font-size: 26px;
     margin-bottom: 50px;
   }
 }
@@ -774,7 +784,7 @@ img {
 @media (max-width: 567px) {
   .portfolio {
     padding-top: 43px;
-    padding-bottom: 30px;
+    padding-bottom: 56px;
   }
   .portfolio__title {
     font-size: 18px;
@@ -806,7 +816,6 @@ img {
 
 .price__subtitle {
   margin-bottom: 59px;
-  font-size: 20px;
 }
 
 .price__card {
@@ -900,6 +909,31 @@ img {
       flex-wrap: wrap;
 }
 
+@media (max-width: 1200px) {
+  .cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 567px) {
+  .price {
+    padding: 52px 10px 10px 10px;
+  }
+  .price__title {
+    max-width: 242px;
+    line-height: 22px;
+    margin-bottom: 27px;
+  }
+  .card__text {
+    padding: 28px;
+  }
+  .card__title {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+}
+
 .step {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
@@ -956,7 +990,6 @@ img {
 
 .steps__subtitle {
   margin-bottom: 65px;
-  font-size: 20px;
 }
 
 .steps-block {
@@ -985,16 +1018,26 @@ img {
 
 @media (max-width: 768px) {
   .step {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .step:after {
     display: none;
+  }
+  .steps {
+    padding: 12px;
   }
   .steps-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .steps__title {
+    line-height: 22px;
+    margin-bottom: 23px;
+  }
+  .steps__subtitle {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
