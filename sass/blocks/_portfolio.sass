@@ -9,9 +9,17 @@
     margin-bottom: 99px
   &__arrows
     max-width: 120px
-    //margin: 60px auto
+    margin: 60px auto
     display: flex
     justify-content: space-between
+
+@media (max-width: 910px)
+  .portfolio
+    padding-top: 60px
+    padding-bottom: 50px
+    &__title
+      font-size: 26px
+      margin-bottom: 50px
 
 @media (max-width: 567px)
   .portfolio
@@ -20,8 +28,10 @@
     &__title
       font-size: 18px
       line-height: 22px
-      margin-bottom: 38px
-    // &__slider
-    //   margin: 0 20px
-    // &__arrows
-    //   margin-top: 46px
+      margin-bottom: 36px
+    &__slider
+      margin: 0 15px
+    &__item
+      padding-left: 7px
+    &__arrows
+      margin-top: 46px
