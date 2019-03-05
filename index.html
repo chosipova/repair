@@ -117,7 +117,7 @@
 
   <section class="portfolio section">
     <div class="container">
-      <h2 class="section-title portfolio__title">Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах</h2>
+      <h2 class="section-title portfolio__title">Работая с 2007 года, <br> мы сделали более 500 ремонтов в квартирах и домах</h2>
       <div class="owl-carousel owl-theme slider portfolio__slider">
         <div class="slide__item"><img class="slider__image" src="img/portfolio/slide1.png" alt=""></div>
         <div class="slide__item"><img class="slider__image" src="img/portfolio/slide2.png" alt=""></div>
@@ -193,13 +193,11 @@
   <script>
     $(document).ready(function () {
       $('.slider').owlCarousel({
-        
         loop: true,
         margin: 25,
         dots: false,
         nav: true,
         navText: [$('.arrows__right'), $('.arrows__left')],
-        pagination: true,
         responsive: {
           0: {
             items: 1
