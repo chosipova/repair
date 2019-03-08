@@ -29,6 +29,7 @@
   </script> <noscript>
     <div><img src="https://mc.yandex.ru/watch/52710670" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript> <!-- /Yandex.Metrika counter -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=21d135d2-fcc6-400f-85d9-764bc2447b82&lang=ru_RU" type="text/javascript"></script>
   <title>Ремонт квартир</title>
 </head>
 
@@ -360,8 +361,40 @@
     <!-- /.section brif -->
   </main>
   <footer class="footer">
-    <div class="map" id="map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A20dc15fa875c9026f5f2b59fae18daca2836e00395c34facb6a886ba6823460e&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+    <div class="map" style="width: 50%; height: 100%" id="map">
+      <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A20dc15fa875c9026f5f2b59fae18daca2836e00395c34facb6a886ba6823460e&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script> -->
+      <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init() {
+          // Создание карты.    
+          var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.61140907, 37.20112250],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 14
+          }, {
+            searchControlProvider: 'yandex#search'
+          });
+          myMap.behaviors.disable('scrollZoom');
+          // Создание метки
+          var myPlacemark = new ymaps.Placemark(
+            // Координаты метки
+            [55.61140907, 37.20112250], {
+              hintContent: 'г. Москва, ул. Ленина, д. 10'
+            }
+          );
+
+          // Добавление метки на карту
+          myMap.geoObjects.add(myPlacemark);
+        }
+      </script>
     </div>
     <div class="container footer-container">
       <div class="contacts-block">
