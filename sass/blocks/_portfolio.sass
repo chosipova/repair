@@ -17,6 +17,7 @@
 
 @media (max-width: 910px)
   .portfolio
+    background: $section-color
     padding-top: 60px
     padding-bottom: 50px
     &__title
@@ -33,6 +34,12 @@
       margin-bottom: 36px
     &__slider
       margin: 0 15px
+      &:hover
+        outline: 0 !important
+        outline-offset: 0 !important
+      &:focus
+        outline: 0 !important
+        outline-offset: 0 !important
     &__item
       padding-left: 7px
     &__arrows
