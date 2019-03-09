@@ -1,0 +1,43 @@
+.assistant
+  padding: 100px 0
+  &-block
+    display: flex
+    justify-content: space-between
+    &__image
+      position: relative
+    &__text
+      position: absolute
+      top: 0
+      left: 0
+      margin: 27px 26px
+      display: block
+      max-width: 280px
+      line-height: 23px
+      color: #000000
+      font-size: 16px
+
+@media (max-width: 1200px)
+  .assistant
+    padding: 28px 0
+    &-block
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      &__image
+        margin: 12px 0
+     
+@media (max-width: 1200px)
+  .assistant
+    &-block
+      &__text
+        font-size: 14px
+        
+@media (max-width: 567px)
+  .assistant
+    &-block
+      &__image
+        max-width: 272px;
+      &__text
+        margin: 19px
+        font-size: 12px
+        line-height: 16.83px

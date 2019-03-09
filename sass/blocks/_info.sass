@@ -1,0 +1,25 @@
+.info
+  background-color: #ffc000
+  text-align: center
+  &-block
+    padding: 90px 0
+  &__title
+    margin: auto
+    max-width: 950px
+    font-size: 32px
+    line-height: 50px
+    +reg
+    color: #000000
+
+@media (max-width: 768px)
+  .info
+    &-block
+      padding: 72px 10px
+    &__title
+      font-size: 18px
+      line-height: 22px
+
+@media (max-width: 576px)
+  .info
+    &__title
+      max-width: 268px

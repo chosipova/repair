@@ -93,8 +93,10 @@
             <span class="offer-block__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
             <!-- /.offer-subtitle -->
             <form action="#" class="offer__form" id="offer-form">
-              <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
-              <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
+              <div class="offer-inputs">
+                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
+                <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
+              </div>
               <button class="button offer__button ">Получить бесплатный дизайн-проект</button>
             </form>
             <!-- /.form offer__form -->
@@ -292,6 +294,50 @@
     </section>
     <!-- /.section steps -->
 
+    <section class="info">
+      <div class="container">
+        <div class="info-block">
+          <p class="info__title">Ремонт обойдется Вам дешевле, так как <br> мы используем качественные материалы по оптовым
+            ценам</p>
+          <!-- /.info__title -->
+        </div>
+        <!-- /.info-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.info -->
+
+    <section class="assistant">
+      <div class="container">
+        <div class="assistant-block">
+          <div class="assistant-block__image">
+            <span class="assistant-block__text">Поможем закупить все материалы по оптовым ценам у проверенных
+              поставщиков </span>
+            <!-- /.assistant-block__text -->
+            <img src="img/assistant/img1.png" alt="image">
+          </div>
+          <!-- /.assistant-block__image -->
+          <div class="assistant-block__image">
+            <span class="assistant-block__text">Мы дадим Вам максимальные скидки у наших партнеров для закупки
+              материалов оптом</span>
+            <!-- /.assistant-block__text -->
+            <img src="img/assistant/img2.png" alt="image">
+          </div>
+          <!-- /.assistant-block__image -->
+          <div class="assistant-block__image">
+            <span class="assistant-block__text">Все, что не сможете найти в городе - поможем заказать у проверенных
+              поставщиков</span>
+            <!-- /.assistant-block__text -->
+            <img src="img/assistant/img3.png" alt="image">
+          </div>
+          <!-- /.assistant-block__image -->
+        </div>
+        <!-- /.assistant-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.assistant -->
+
     <section class="section brif">
       <div class="container">
         <div class="brif-block">
@@ -350,7 +396,8 @@
           <ul class="contacts-list">
             <li class="contacts-list__item">
               <span class="contacts-list__icon"><img src="img/footer/map.png" alt="image" class="contacts-list__image"></span>
-              <div class="contacts-list__text">г. Москва <p>ул. Ленина, д. 10, <br> корпус 2, оф. 308</p>
+              <div class="contacts-list__text">г. Москва <a href="https://yandex.ru/maps/-/CCazFHyH">ул. Ленина, д. 10,
+                  <br> корпус 2, оф. 308</a>
               </div>
             </li>
             <li class="contacts-list__item">
@@ -360,7 +407,7 @@
             </li>
             <li class="contacts-list__item">
               <span class="contacts-list__icon"><img src="img/footer/phone.png" alt="image" class="contacts-list__image"></span>
-              <div class="contacts-list__text">Телефон: <p>+ 7 (495) 42-251-31</p>
+              <div class="contacts-list__text">Телефон: <a href="#">+ 7 (495) 42-251-31</a>
               </div>
             </li>
           </ul>
@@ -386,6 +433,7 @@
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/modernizr-custom.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>

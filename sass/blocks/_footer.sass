@@ -38,6 +38,21 @@
       line-height: 26px;
       p
         +bold
+      a
+        text-decoration: none
+        display: block
+        color: $text-color
+        +bold
+        cursor: pointer
+        &:hover
+          outline: 0
+          outline-offset: 0
+        &:active
+          outline: 0
+          outline-offset: 0
+        &:focus
+          outline: 0
+          outline-offset: 0
 
 @media (max-width: 1200px)
   .contacts
