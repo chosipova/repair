@@ -83,7 +83,7 @@ img
 input.invalid
   border: 1px solid red
 
-label.invalid
+div.invalid
   padding-right: 70px
   
 @media (max-width: 1200px)
@@ -101,7 +101,7 @@ label.invalid
       line-height: 30px
     &-subtitle
       font-size: 14px
-  label.invalid
+  div.invalid
     font-size: 10px
     margin: 0
 
@@ -113,12 +113,3 @@ label.invalid
   .section
     padding: 50px 0
 
-element:hover, element:active 
-  webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none /*only to disable context menu on long press*/
-
-
-@media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0)
-  div
-    color:green

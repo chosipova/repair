@@ -322,7 +322,8 @@
           </div>
           <!-- /.assistant-block__image -->
           <div class="assistant-block__image">
-            <h4 class="assistant-block__text">Мы дадим Вам <a href="#">максимальные скидки</a> у наших партнеров для закупки
+            <h4 class="assistant-block__text">Мы дадим Вам <a href="#">максимальные скидки</a> у наших партнеров для
+              закупки
               материалов оптом</h4>
             <!-- /.assistant-block__text -->
             <img src="img/assistant/img2.png" alt="image">
@@ -330,7 +331,7 @@
           <!-- /.assistant-block__image -->
           <div class="assistant-block__image">
             <h4 class="assistant-block__text">Все, что не сможете найти в городе - поможем заказать у <a href="#">проверенных
-              поставщиков</a></h4>
+                поставщиков</a></h4>
             <!-- /.assistant-block__text -->
             <img src="img/assistant/img3.png" alt="image">
           </div>
@@ -504,6 +505,7 @@
 
       $('#offer-form').validate({
         errorClass: "invalid",
+        errorElement: "div",
         rules: {
           phone: "required",
           username: {
@@ -525,41 +527,6 @@
       /* Маска для телефона */
       $(".phone").mask("8 (999) 999-9999");
 
-      // var newdiv = document.createElement("div");
-      // var existing = document.getElementById("offer-form");
-      // // var existingdiv1 = document.getElementsByTagName('label');
-      // $("body").append(newdiv);
-      // newdiv.append(existing);
-      // $("body").on('DOMSubtreeModified', "#soffer-form", function () {
-      //   $('lable.invalid').replaceWith(function () {
-      //     console.log("Проблема тут");
-      //     return $("<span />").append($(this).contents());
-      //   });
-      // });
-
-      // function checkForChanges() {
-      //   if ($('input').hasClass('invalid')) {
-      //     $('label').replaceWith(function () {
-      //       console.log("Проблема тут");
-      //       $(this).replaceWith("<div>" + $(this).text() + "</div>");
-      //       //return $("<div />").append($(this).contents());
-      //     });
-      //   } else
-      //     setTimeout(checkForChanges, 500);
-      // }
-
-
-      // $('#offer-form').on('appendCompleted', function () {
-      //   console.log("Проблема тут");
-      //   $('lable').replaceWith(function () {
-      //     console.log("Проблема тут 1");
-      //     $(this).replaceWith("<div>" + $(this).text() + "</div>");
-      //     //return $("<div />").append($(this).contents());
-      //   });
-      // });
-
-
-      //checkForChanges();
       /* Слайдер */
       $('.slider').slick({
         slidesToShow: 3,
