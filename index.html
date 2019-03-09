@@ -23,7 +23,7 @@
         <div class="navbar__info">
           <div class="navbar__contacts">
             <span class="navbar__adress">Калуга, Москва, МО</span>
-            <a href="#" class="navbar__phone">+7 (495) 42-251-31</a>
+            <a href="tel:+7(495)42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <button class="button navbar__button" onclick="ym(52710670, 'reachGoal', 'button'); return true;" id="button">Перезвоните
             мне</button>
@@ -92,12 +92,15 @@
             <!-- /.offer-title -->
             <span class="offer-block__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
             <!-- /.offer-subtitle -->
-            <form action="#" class="offer__form" id="offer-form">
+            <form action="#" method="post" class="offer__form" id="offer-form">
               <div class="offer-inputs">
-                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
-                <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
+                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя" id="username"
+                  onsubmit="ym(52710670, 'reachGoal', 'username'); return true;">
+                <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон" id="phone"
+                  onsubmit="ym(52710670, 'reachGoal', 'phone'); return true;">
               </div>
-              <button class="button offer__button ">Получить бесплатный дизайн-проект</button>
+              <button class="button offer__button" id="offer-btn" onclick="ym(52710670, 'reachGoal', 'offer-btn'); return true;">Получить
+                бесплатный дизайн-проект</button>
             </form>
             <!-- /.form offer__form -->
             <div class="offer-contacts">
@@ -105,7 +108,7 @@
                 течение 60 секунд</span>
               <span class="offer-contacts__span wow fadeInRight" data-wow-delay="0.6s">
                 или перезвоните нам сами
-                <a href="#" class="offer-contacts__phone">+7 (495) 42-251-31</a>
+                <a href="tel:+7(495)42-251-31" class="offer-contacts__phone">+7 (495) 42-251-31</a>
               </span>
             </div>
           </div>
@@ -297,8 +300,9 @@
     <section class="info">
       <div class="container">
         <div class="info-block">
-          <p class="info__title">Ремонт обойдется Вам дешевле, так как <br> мы используем качественные материалы по оптовым
-            ценам</p>
+          <h3 class="info__title">Ремонт обойдется Вам дешевле, так как <br> мы используем качественные материалы по
+            оптовым
+            ценам</h3>
           <!-- /.info__title -->
         </div>
         <!-- /.info-block -->
@@ -311,22 +315,22 @@
       <div class="container">
         <div class="assistant-block">
           <div class="assistant-block__image">
-            <span class="assistant-block__text">Поможем закупить все материалы по оптовым ценам у проверенных
-              поставщиков </span>
+            <h4 class="assistant-block__text">Поможем закупить все материалы по оптовым ценам у проверенных
+              поставщиков </h4>
             <!-- /.assistant-block__text -->
             <img src="img/assistant/img1.png" alt="image">
           </div>
           <!-- /.assistant-block__image -->
           <div class="assistant-block__image">
-            <span class="assistant-block__text">Мы дадим Вам максимальные скидки у наших партнеров для закупки
-              материалов оптом</span>
+            <h4 class="assistant-block__text">Мы дадим Вам <a href="#">максимальные скидки</a> у наших партнеров для закупки
+              материалов оптом</h4>
             <!-- /.assistant-block__text -->
             <img src="img/assistant/img2.png" alt="image">
           </div>
           <!-- /.assistant-block__image -->
           <div class="assistant-block__image">
-            <span class="assistant-block__text">Все, что не сможете найти в городе - поможем заказать у проверенных
-              поставщиков</span>
+            <h4 class="assistant-block__text">Все, что не сможете найти в городе - поможем заказать у <a href="#">проверенных
+              поставщиков</a></h4>
             <!-- /.assistant-block__text -->
             <img src="img/assistant/img3.png" alt="image">
           </div>
@@ -407,7 +411,7 @@
             </li>
             <li class="contacts-list__item">
               <span class="contacts-list__icon"><img src="img/footer/phone.png" alt="image" class="contacts-list__image"></span>
-              <div class="contacts-list__text">Телефон: <a href="#">+ 7 (495) 42-251-31</a>
+              <div class="contacts-list__text">Телефон: <a href="tel:+7(495)42-251-31">+ 7 (495) 42-251-31</a>
               </div>
             </li>
           </ul>
