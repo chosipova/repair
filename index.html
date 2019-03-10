@@ -92,14 +92,12 @@
             <!-- /.offer-title -->
             <span class="offer-block__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
             <!-- /.offer-subtitle -->
-            <form action="#" method="post" class="offer__form" id="offer-form">
+            <form action="#" method="post" class="offer__form" id="offer-form" onsubmit="ym(52710670, 'reachGoal', 'offer-form'); return true;">
               <div class="offer-inputs">
-                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя" id="username"
-                  onsubmit="ym(52710670, 'reachGoal', 'username'); return true;">
-                <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон" id="phone"
-                  onsubmit="ym(52710670, 'reachGoal', 'phone'); return true;">
+                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
+                <input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
               </div>
-              <button class="button offer__button" id="offer-btn" onclick="ym(52710670, 'reachGoal', 'offer-btn'); return true;">Получить
+              <button class="button offer__button" id="offer-btn">Получить
                 бесплатный дизайн-проект</button>
             </form>
             <!-- /.form offer__form -->
@@ -438,7 +436,6 @@
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/modernizr-custom.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
