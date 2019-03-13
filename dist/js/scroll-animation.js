@@ -1,13 +1,1 @@
-$(document).ready(function () {
-  var elem = $('.step');
-
-  $(window).scroll(function () {
-    // console.log($(window).scrollTop());
-    if ($(window).scrollTop() > elem.offset().top - $(window).height()) {
-      //console.log("я здесь");
-      elem.addClass('step-anim');
-    } else {
-      elem.removeClass('step-anim');
-    }
-  });
-});
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--)d[c.toString(a)]=k[c]||c.toString(a);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(8).f(4(){e 0=$(\'.2\');$(1).d(4(){b($(1).a()>0.9().g-$(1).6()){0.5(\'2-3\')}c{0.7(\'2-3\')}})});',17,17,'elem|window|step|anim|function|addClass|height|removeClass|document|offset|scrollTop|if|else|scroll|var|ready|top'.split('|'),0,{}))
