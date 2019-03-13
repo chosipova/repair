@@ -1,0 +1,35 @@
+{
+  "name": "repair",
+  "version": "1.0.0",
+  "description": "Сайт для компании \"Ремонт квартир\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osipova/repair.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osipova/repair/issues"
+  },
+  "homepage": "https://github.com/osipova/repair#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-js-minify": "0.0.3",
+    "gulp-tinypng-plugin": "^1.0.7",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-tinypng-compress": "^1.2.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0"
+  }
+}
