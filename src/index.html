@@ -69,7 +69,7 @@
             </ul>
           </div>
           <!-- /.hero__text -->
-          <div class="hero-image wow fadeInRight slow">
+          <div class="hero-image">
             <img src="img/hero/hero-image.jpg" alt="План квартиры">
           </div>
           <!-- /.hero__image -->
@@ -120,12 +120,12 @@
           и
           домах</h2>
         <div class="slider portfolio__slider">
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide1.jpg" alt=""></div>
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide2.jpg" alt=""></div>
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide3.jpg" alt=""></div>
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide1.jpg" alt=""></div>
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide2.jpg" alt=""></div>
-          <div class="slide__item portfolio__item"><img defer class="slider__image" src="img/portfolio/slide3.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide1.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide2.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide3.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide1.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide2.jpg" alt=""></div>
+          <div class="slide__item portfolio__item"><img class="slider__image" src="img/portfolio/slide3.jpg" alt=""></div>
         </div>
         <div class="arrows portfolio__arrows">
           <div class="arrows__right">
@@ -148,7 +148,7 @@
         <!-- /.section__subtitle price__subtitle -->
         <div class="cards">
           <div class="card price__card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="card__image"><img defer src="img/price/card1.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card1.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
@@ -160,7 +160,7 @@
           </div>
           <!-- /.card -->
           <div class="card price__card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="card__image"><img defer src="img/price/card2.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card2.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Ремонт комнат и квартир</h4>
@@ -172,7 +172,7 @@
           </div>
           <!-- /.card -->
           <div class="card price__card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="card__image"><img defer src="img/price/card3.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card3.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Отделка офисных помещений</h4>
@@ -184,7 +184,7 @@
           </div>
           <!-- /.card -->
           <div class="card price__card wow fadeInUp" data-wow-delay="0.4s">
-            <div class="card__image"><img defer src="img/price/card4.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card4.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Ремонт в новостройках</h4>
@@ -196,7 +196,7 @@
           </div>
           <!-- /.card -->
           <div class="card price__card wow fadeInUp" data-wow-delay="0.5s">
-            <div class="card__image"><img defer src="img/price/card5.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card5.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Ремонт кухонь</h4>
@@ -208,7 +208,7 @@
           </div>
           <!-- /.card -->
           <div class="card price__card wow fadeInUp" data-wow-delay="0.6s">
-            <div class="card__image"><img defer src="img/price/card6.jpg" alt="image"></div>
+            <div class="card__image"><img src="img/price/card6.jpg" alt="image"></div>
             <!-- /.card__image -->
             <div class="card__text">
               <h4 class="card__title">Ремонт дач и коттеджей</h4>
@@ -442,6 +442,10 @@
   <script src="js/top-button.js"></script>
   <script src="js/scroll-animation.js"></script>
 
+  <script>
+    new WOW().init();
+  </script>
+
   <!-- Yandex.Metrika counter -->
   <script>
     (function (m, e, t, r, i, k, a) {
@@ -459,45 +463,55 @@
       webvisor: true,
       trackHash: true
     });
-  </script> <noscript>
+  </script>
+  <noscript>
     <div><img src="https://mc.yandex.ru/watch/52710670" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript> <!-- /Yandex.Metrika counter -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=21d135d2-fcc6-400f-85d9-764bc2447b82&lang=ru_RU"></script>
+
+  <script async src="https://api-maps.yandex.ru/2.1/?apikey=21d135d2-fcc6-400f-85d9-764bc2447b82&lang=ru_RU&loadByRequire=1"></script>
 
   <script>
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-
-    function init() {
-      // Создание карты.    
-      var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.61140907, 37.20112250],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 14
-      }, {
-        searchControlProvider: 'yandex#search'
+    $(document).ready(function () {
+      var elem = $('.map');
+      var l = false;
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > elem.offset().top - $(window).height() & l == false) {
+          ymaps.load(init);
+          l = true;
+        };
       });
-      myMap.behaviors.disable('scrollZoom');
-      // Создание метки
-      var myPlacemark = new ymaps.Placemark(
-        // Координаты метки
-        [55.61140907, 37.20112250], {
-          hintContent: 'г. Москва, ул. Ленина, д. 10'
-        }
-      );
-      // Добавление метки на карту
-      myMap.geoObjects.add(myPlacemark);
-    }
-  </script>
 
-  <script>
-    new WOW().init();
+      function init() {
+
+        // Создание карты.  
+
+        var myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [55.61140907, 37.20112250],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 14
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        myMap.behaviors.disable('scrollZoom');
+        // Создание метки
+        var myPlacemark = new ymaps.Placemark(
+          // Координаты метки
+          [55.61140907, 37.20112250], {
+            hintContent: 'г. Москва, ул. Ленина, д. 10'
+          }
+        );
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+
+      }
+    });
   </script>
 </body>
 

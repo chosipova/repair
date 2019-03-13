@@ -1,1 +1,22 @@
-eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--)d[c.toString(a)]=k[c]||c.toString(a);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(o).8(2(){d 1=$(\'#3-n\');$(6).m(2(){l($(6).5()>j){1.i(\'3-4\')}h{1.g(\'3-4\')}});1.b(\'a\',2(e){e.7();$(\'k, f\').c({5:0},\'9\')})});',25,25,'|btn|function|top|button_show|scrollTop|window|preventDefault|ready|300|click|on|animate|var||body|removeClass|else|addClass|200|html|if|scroll|button|document'.split('|'),0,{}))
+$(document).ready(function () {
+  var btn = $('#top-button');
+ // console.log(btn);
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 200) {
+      btn.addClass('top-button_show');
+      //console.log("Здесь");
+    } else {
+      btn.removeClass('top-button_show');
+      //console.log("Здесь");
+    }
+  });
+
+  btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, '300');
+  });
+
+});

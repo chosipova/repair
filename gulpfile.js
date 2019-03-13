@@ -25,7 +25,7 @@ gulp.task('minify-css', function (done) {
 });
 
 gulp.task('move-js', function (done) {
-  return gulp.src('./src/js/*.js')
+  return gulp.src('./src/js/*.min.js')
     .pipe(gulp.dest('dist/js'))
   done();
 });
@@ -59,13 +59,13 @@ gulp.task('tinypng', function () {
 var minifyjs = require('gulp-js-minify');
 
 gulp.task('minify-js', function(){
-  return gulp.src('src/js/*.js')
+  return gulp.src('src/js/*.js', '!src/js/*.min.js')
     .pipe(minifyjs())
     .pipe(gulp.dest('dist/js/'))
     done();
 });
 
-gulp.task('build', gulp.parallel('minify-css', 'move-js', 'fonts', 'tinypng', 'minify', 'minify-js', function (done) {
+gulp.task('build', gulp.parallel('minify-css', 'fonts', 'tinypng', 'minify', 'minify-js', 'move-js', function (done) {
   // do more stuff
   done();
 }));
