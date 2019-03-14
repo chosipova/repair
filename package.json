@@ -23,6 +23,7 @@
     "gulp-clean-css": "^4.0.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-js-minify": "0.0.3",
+    "gulp-rename": "^1.4.0",
     "gulp-tinypng-plugin": "^1.0.7",
     "gulp-uglify": "^3.0.2"
   },

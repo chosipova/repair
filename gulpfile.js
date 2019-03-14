@@ -2,10 +2,7 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var tinypng = require('gulp-tinypng-compress');
-var imagemin = require('gulp-imagemin');
-var imageminJpegRecompress = require('imagemin-jpeg-recompress');
-var pngquant = require('imagemin-pngquant');
-var cache = require('gulp-cache');
+var rename = require("gulp-rename");
 
 gulp.task('default', defaultTask);
 
@@ -46,7 +43,7 @@ gulp.task('fonts', function (done) {
 });
 
 gulp.task('tinypng', function () {
-  return gulp.src('src/img/**/*.{png,jpg,jpeg}')
+  return gulp.src('./src/img/**/*.{png,jpg,jpeg}')
     .pipe(tinypng({
       //key : 'API_KEY'
       key: 'S7Pg23cV7Hw0W5RPdq22ThcBP5lJd58v',
@@ -59,13 +56,16 @@ gulp.task('tinypng', function () {
 var minifyjs = require('gulp-js-minify');
 
 gulp.task('minify-js', function(){
-  return gulp.src('src/js/*.js', '!src/js/*.min.js')
+  return gulp.src(['src/js/*.js', '!src/js/*.min.js'])
     .pipe(minifyjs())
+    .pipe(rename(function (path) {
+      path.extname = ".min.js";
+    }))
     .pipe(gulp.dest('dist/js/'))
     done();
 });
 
-gulp.task('build', gulp.parallel('minify-css', 'fonts', 'tinypng', 'minify', 'minify-js', 'move-js', function (done) {
+gulp.task('build', gulp.parallel('minify-css', 'fonts', 'tinypng', 'minify', 'move-js', 'minify-js', function (done) {
   // do more stuff
   done();
 }));

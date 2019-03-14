@@ -385,8 +385,11 @@
     <!-- /.section brif -->
   </main>
   <footer class="footer">
-    <div class="map" style="max-width: 100%; height: 100%" id="map">
-      <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A20dc15fa875c9026f5f2b59fae18daca2836e00395c34facb6a886ba6823460e&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script> -->
+    <div class="map" id="map">
+      <!-- style="max-width: 100%; height: 100%" -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.4558741891283!2d37.19910331538458!3d55.61148301035067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b556d92c52e921%3A0x7069f1a444f51ab2!2z0YPQuy4g0JvQtdC90LjQvdCwLCAxMCwg0KLQvtC70YHRgtC-0L_QsNC70YzRhtC10LLQviwg0JzQvtGB0LrQstCwLCAxNDMzNTA!5e0!3m2!1sru!2sru!4v1552583243682?hl=ru"
+        width="100%" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="container footer-container">
       <div class="contacts-block">
@@ -433,85 +436,77 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
-  <script>
-    if (screen.width > 900) {
-      document.write('<script type = "text/javascript" src = "js/wow.min.js" >< /sc' + 'ript>');
-    }
-  </script>
-  <script src="js/modal.js"></script>
-  <script src="js/top-button.js"></script>
-  <script>
-    if (screen.width > 900) {
-      document.write('<script type="text/javascript" src="js/scroll-animation.js"></sc' + 'ript > ');
-    }
-  </script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/modal.min.js"></script>
+  <script src="js/top-button.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/scroll-animation.min.js"></script>
 
   <script>
     new WOW().init();
 
     $(document).ready(function () {
-        $('#brif-form').validate({
-          errorClass: "invalid",
-          rules: {
-            phone: "required",
-            username: {
-              required: true,
-              minlength: 2,
-              maxlength: 15
-            },
-            email: {
-              required: true,
-              email: true
-            }
+      $('#brif-form').validate({
+        errorClass: "invalid",
+        rules: {
+          phone: "required",
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
           },
-          messages: {
-            email: {
-              email: "Введите корректный email",
-              required: "Заполните поле"
-            },
-            username: {
-              minlength: jQuery.validator.format("Минимальное количество символов: 2"),
-              required: "Заполните поле"
-            },
-            phone: {
-              required: "Заполните поле"
-            }
+          email: {
+            required: true,
+            email: true
           }
-        })
-
-        $('#offer-form').validate({
-          errorClass: "invalid",
-          errorElement: "div",
-          rules: {
-            phone: "required",
-            username: {
-              required: true,
-              minlength: 2,
-              maxlength: 15
-            }
+        },
+        messages: {
+          email: {
+            email: "Введите корректный email",
+            required: "Заполните поле"
           },
-          messages: {
-            username: {
-              minlength: jQuery.validator.format("Минимальное количество символов: 2"),
-              required: "Заполните поле"
-            },
-            phone: {
-              required: "Заполните поле"
-            }
+          username: {
+            minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+            required: "Заполните поле"
+          },
+          phone: {
+            required: "Заполните поле"
           }
-        });
+        }
+      })
 
-        $(".phone").mask("8 (999) 999-9999");
+      $('#offer-form').validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          phone: "required",
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          }
+        },
+        messages: {
+          username: {
+            minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+            required: "Заполните поле"
+          },
+          phone: {
+            required: "Заполните поле"
+          }
+        }
+      });
 
-        $('.slider').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          prevArrow: $('.arrows__left'),
-          nextArrow: $('.arrows__right'),
-          responsive: [{
+      $(".phone").mask("8 (999) 999-9999");
+
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+        responsive: [{
             breakpoint: 1200,
             settings: {
               slidesToShow: 2,
@@ -525,9 +520,9 @@
               slidesToScroll: 1
             }
           }
-          ]
-        });
+        ]
       });
+    });
   </script>
 
   <!-- Yandex.Metrika counter -->
@@ -552,8 +547,6 @@
     <div><img src="https://mc.yandex.ru/watch/52710670" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript> <!-- /Yandex.Metrika counter -->
 
-  <script async src="https://api-maps.yandex.ru/2.1/?apikey=21d135d2-fcc6-400f-85d9-764bc2447b82&lang=ru_RU&loadByRequire=1"></script>
-  <script src="js/map.js"></script>
 
 </body>
 
