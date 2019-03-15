@@ -65,7 +65,13 @@ gulp.task('minify-js', function(){
     done();
 });
 
-gulp.task('build', gulp.parallel('minify-css', 'fonts', 'tinypng', 'minify', 'move-js', 'minify-js', function (done) {
+gulp.task('move-files', function (done) {
+  return gulp.src('./src/mail.php', './src/favicon.ico', './src/phpmailer')
+    .pipe(gulp.dest('dist/'))
+  done();
+});
+
+gulp.task('build', gulp.parallel('minify-css', 'fonts', 'tinypng', 'minify', 'move-js', 'minify-js', 'move-files', function (done) {
   // do more stuff
   done();
 }));
